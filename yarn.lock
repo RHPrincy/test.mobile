@@ -778,6 +778,13 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
+"@egjs/hammerjs@^2.0.17":
+  version "2.0.17"
+  resolved "https://registry.yarnpkg.com/@egjs/hammerjs/-/hammerjs-2.0.17.tgz#5dc02af75a6a06e4c2db0202cae38c9263895124"
+  integrity sha512-XQsZgjm2EcVUiZQf11UBJQfmZeEmOW8DpI1gsFeln6w0ae0ii4dMQEQ0kjl6DspdWX1aGY1/loyXnP0JS06e/A==
+  dependencies:
+    "@types/hammerjs" "^2.0.36"
+
 "@expo/cli@0.24.16":
   version "0.24.16"
   resolved "https://registry.yarnpkg.com/@expo/cli/-/cli-0.24.16.tgz#800d2da95f6399367fcca9d3b578b204a9e265bc"
@@ -1370,6 +1377,13 @@
   dependencies:
     "@radix-ui/react-compose-refs" "1.1.2"
 
+"@react-native-async-storage/async-storage@2.1.2":
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/@react-native-async-storage/async-storage/-/async-storage-2.1.2.tgz#8aae432adfc20800308e2ef3ce380864f0f9def8"
+  integrity sha512-dvlNq4AlGWC+ehtH12p65+17V0Dx7IecOWl6WanF2ja38O1Dcjjvn7jVzkUHJ5oWkQBlyASurTPlTHgKXyYiow==
+  dependencies:
+    merge-options "^3.0.4"
+
 "@react-native/assets-registry@0.79.4":
   version "0.79.4"
   resolved "https://registry.yarnpkg.com/@react-native/assets-registry/-/assets-registry-0.79.4.tgz#6b1f6c843ae7b6e6e6804f897c182301c0f03d8c"
@@ -1547,7 +1561,7 @@
     "@react-navigation/elements" "^2.5.2"
     warn-once "^0.1.1"
 
-"@react-navigation/native@^7.1.6":
+"@react-navigation/native@^7.1.14", "@react-navigation/native@^7.1.6":
   version "7.1.14"
   resolved "https://registry.yarnpkg.com/@react-navigation/native/-/native-7.1.14.tgz#6b5b57bba4c5f45bfc9961da2f921aba5215dfad"
   integrity sha512-X233/CNx41FpshlWe4uEAUN8CNem3ju4t5pnVKcdhDR0cTQT1rK6P0ZwjSylD9zXdnHvJttFjBhKTot6TcvSqA==
@@ -1564,6 +1578,14 @@
   integrity sha512-42mZrMzQ0LfKxUb5OHIurYrPYyRsXFLolucILrvm21f0O40Sw0Ufh1bnn/jRqnxZZu7wvpUGIGYM8nS9zVE1Aw==
   dependencies:
     nanoid "^3.3.11"
+
+"@react-navigation/stack@^7.4.2":
+  version "7.4.2"
+  resolved "https://registry.yarnpkg.com/@react-navigation/stack/-/stack-7.4.2.tgz#55f64bc1131eb86528a3509f77779a0c2fb2e327"
+  integrity sha512-QlqBxKBfKVx/XRH04pRRGQ92tO1fV0RL7YEw5G4pew6CNY26102dVQl5A39ZztvlvEDQbCQkatyDS7i2xR1QiA==
+  dependencies:
+    "@react-navigation/elements" "^2.5.2"
+    color "^4.2.3"
 
 "@sinclair/typebox@^0.27.8":
   version "0.27.8"
@@ -1628,6 +1650,11 @@
   integrity sha512-olP3sd1qOEe5dXTSaFvQG+02VdRXcdytWLAZsAq1PecU8uqQAhkrnbli7DagjtXKW/Bl7YJbUsa8MPcuc8LHEQ==
   dependencies:
     "@types/node" "*"
+
+"@types/hammerjs@^2.0.36":
+  version "2.0.46"
+  resolved "https://registry.yarnpkg.com/@types/hammerjs/-/hammerjs-2.0.46.tgz#381daaca1360ff8a7c8dff63f32e69745b9fb1e1"
+  integrity sha512-ynRvcq6wvqexJ9brDMS4BnBLzmr0e14d6ZJTEShTBWKymQiHwlAyGu0ZPEFI2Fh1U53F7tN9ufClWM5KvqkKOw==
 
 "@types/istanbul-lib-coverage@*", "@types/istanbul-lib-coverage@^2.0.0", "@types/istanbul-lib-coverage@^2.0.1":
   version "2.0.6"
@@ -2873,6 +2900,18 @@ expo-font@~13.3.2:
   dependencies:
     fontfaceobserver "^2.1.0"
 
+expo-image-loader@~5.1.0:
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/expo-image-loader/-/expo-image-loader-5.1.0.tgz#f7d65f9b9a9714eaaf5d50a406cb34cb25262153"
+  integrity sha512-sEBx3zDQIODWbB5JwzE7ZL5FJD+DK3LVLWBVJy6VzsqIA6nDEnSFnsnWyCfCTSvbGigMATs1lgkC2nz3Jpve1Q==
+
+expo-image-picker@~16.1.4:
+  version "16.1.4"
+  resolved "https://registry.yarnpkg.com/expo-image-picker/-/expo-image-picker-16.1.4.tgz#d4ac2d1f64f6ec9347c3f64f8435b40e6e4dcc40"
+  integrity sha512-bTmmxtw1AohUT+HxEBn2vYwdeOrj1CLpMXKjvi9FKSoSbpcarT4xxI0z7YyGwDGHbrJqyyic3I9TTdP2J2b4YA==
+  dependencies:
+    expo-image-loader "~5.1.0"
+
 expo-keep-awake@~14.1.4:
   version "14.1.4"
   resolved "https://registry.yarnpkg.com/expo-keep-awake/-/expo-keep-awake-14.1.4.tgz#80197728563e0e17523e5a606fbd6fbed9639503"
@@ -3258,7 +3297,7 @@ hermes-parser@0.28.1:
   dependencies:
     hermes-estree "0.28.1"
 
-hoist-non-react-statics@^3.3.2:
+hoist-non-react-statics@^3.3.0, hoist-non-react-statics@^3.3.2:
   version "3.3.2"
   resolved "https://registry.yarnpkg.com/hoist-non-react-statics/-/hoist-non-react-statics-3.3.2.tgz#ece0acaf71d62c2969c2ec59feff42a4b1a85b45"
   integrity sha512-/gGivxi8JPKWNm/W0jSmzcMPpfpPLc3dY/6GxhX2hQ9iGj3aDfklV4ET7NjKpSinLpJ5vafa9iiGIEZg10SfBw==
@@ -3448,6 +3487,11 @@ is-number@^7.0.0:
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/is-number/-/is-number-7.0.0.tgz#7535345b896734d5f80c4d06c50955527a14f12b"
   integrity sha512-41Cifkg6e8TylSpdtTpeLVMqvSBEVzTttHvERD741+pnZ8ANv0004MRL43QKPDlK9cGvNp6NZWZUBlbGXYxxng==
+
+is-plain-obj@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/is-plain-obj/-/is-plain-obj-2.1.0.tgz#45e42e37fccf1f40da8e5f76ee21515840c09287"
+  integrity sha512-YWnfyRwxL/+SsrWYfOpUtz5b3YD+nyfkHvjbcanzk8zgyO4ASD67uVMRt8k5bM4lLMDnXfriRhOpemw+NfT1eA==
 
 is-potential-custom-element-name@^1.0.1:
   version "1.0.1"
@@ -4230,6 +4274,13 @@ memoize-one@^6.0.0:
   version "6.0.0"
   resolved "https://registry.yarnpkg.com/memoize-one/-/memoize-one-6.0.0.tgz#b2591b871ed82948aee4727dc6abceeeac8c1045"
   integrity sha512-rkpe71W0N0c0Xz6QD0eJETuWAJGnJ9afsl1srmwPrI+yBCkge5EycXXbYRyvL29zZVUWQCY7InPRCv3GDXuZNw==
+
+merge-options@^3.0.4:
+  version "3.0.4"
+  resolved "https://registry.yarnpkg.com/merge-options/-/merge-options-3.0.4.tgz#84709c2aa2a4b24c1981f66c179fe5565cc6dbb7"
+  integrity sha512-2Sug1+knBjkaMsMgf1ctR1Ujx+Ayku4EdJN4Z+C2+JzoeF7A3OZ9KM2GY0CpQS51NR61LTurMJrRKPhSs3ZRTQ==
+  dependencies:
+    is-plain-obj "^2.1.0"
 
 merge-stream@^2.0.0:
   version "2.0.0"
@@ -5029,6 +5080,15 @@ react-native-elements@^3.4.3:
     opencollective-postinstall "^2.0.3"
     react-native-ratings "8.0.4"
     react-native-size-matters "^0.3.1"
+
+react-native-gesture-handler@~2.24.0:
+  version "2.24.0"
+  resolved "https://registry.yarnpkg.com/react-native-gesture-handler/-/react-native-gesture-handler-2.24.0.tgz#b6e1f13ec9bf8dfa5f4911854b6e0d73d882a81a"
+  integrity sha512-ZdWyOd1C8axKJHIfYxjJKCcxjWEpUtUWgTOVY2wynbiveSQDm8X/PDyAKXSer/GOtIpjudUbACOndZXCN3vHsw==
+  dependencies:
+    "@egjs/hammerjs" "^2.0.17"
+    hoist-non-react-statics "^3.3.0"
+    invariant "^2.2.4"
 
 react-native-is-edge-to-edge@1.1.7, react-native-is-edge-to-edge@^1.1.6, react-native-is-edge-to-edge@^1.1.7:
   version "1.1.7"
