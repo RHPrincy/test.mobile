@@ -83,12 +83,13 @@ export default function ProductDetailScreen() {
     <SafeAreaView style={styles.safeArea} edges={['top', 'bottom']}>
       <View style={{ flex: 1 }}>
         <ScrollView style={styles.container} showsVerticalScrollIndicator={false}>
-          <Image source={{ uri: product.image }} style={styles.image} />
+          {/* <Image source={{ uri: product.image }} style={styles.image} /> */}
+          <Image source={product.image} style={styles.image} />
 
           <View style={styles.header}>
             <Text style={styles.category}>{product.category}</Text>
             <Text style={styles.name}>{product.name}</Text>
-            <Text style={styles.price}>{product.price.toFixed(2)} €</Text>
+            <Text style={styles.price}>{product.price.toFixed(2)} Ariary</Text>
           </View>
 
           <View style={styles.content}>

@@ -16,7 +16,6 @@ import { RootStackParamList } from '../../navigation/AppNavigator';
 import { getProductById, addProduct, updateProduct } from '../../services/ProductService';
 import { useAuth } from '../../hooks/useAuth';
 import { COLORS, FONTS, SIZES } from '../../constants/theme';
-
 import AppButton from '../../components/common/AppButton';
 import AppTextInput from '../../components/common/AppTextInput';
 import LoadingIndicator from '../../components/loading/LoadingIndicator';
@@ -43,6 +42,9 @@ export default function AddEditProductScreen() {
   const [category, setCategory] = useState('');
   const [imageUri, setImageUri] = useState<string | null>(null);
 
+
+  // Charger les données du produit si en mode édition
+  // Utiliser useEffect pour charger les données du produit si en mode édition
   useEffect(() => {
     const fetchProduct = async () => {
       if (isEditMode) {
@@ -53,7 +55,7 @@ export default function AddEditProductScreen() {
           setPrice(String(product.price));
           setStock(String(product.stock));
           setCategory(product.category);
-          setImageUri(product.image || null);
+          setImageUri(typeof product.image === 'string' ? product.image : null);
         }
       }
       setIsLoading(false);
@@ -61,6 +63,7 @@ export default function AddEditProductScreen() {
     fetchProduct();
   }, [productId, isEditMode]);
 
+  // Fonction pour gérer la sauvegarde du produit
   const handleSave = async () => {
     if (!name || !price || !category) {
       Alert.alert('Validation', 'Les champs Nom, Prix et Catégorie sont requis.');
@@ -74,7 +77,7 @@ export default function AddEditProductScreen() {
       stock: parseInt(stock) || 0,
       category,
       vendeur: userData!.name,
-      image: imageUri || '',
+      image: imageUri ? { uri: imageUri } : undefined,
       isActive: true,
     };
     try {
@@ -130,13 +133,13 @@ export default function AddEditProductScreen() {
           </View>
 
           <View style={styles.fieldGroup}>
-            <Text style={styles.label}>Prix (€)</Text>
+            <Text style={styles.label}>Prix (Ariary)</Text>
             <AppTextInput
               label="Prix du produit"
               value={price}
               onChangeText={setPrice}
               keyboardType="numeric"
-              placeholder="Ex: 79.99"
+              placeholder="Ex: 300000.0"
             />
           </View>
 

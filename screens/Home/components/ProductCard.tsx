@@ -25,7 +25,8 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, onPress }) => {
 
       <View style={styles.imageContainer}>
         {product.image ? (
-          <Image source={{ uri: product.image }} style={styles.productImage} />
+          // <Image source={{ uri: product.image }} style={styles.productImage} />
+          <Image source={product.image} style={styles.productImage} />
         ) : (
           <View style={styles.placeholderImage}>
             <AntDesign name="picture" size={40} color={COLORS.gray} />
@@ -39,7 +40,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, onPress }) => {
         </Text>
 
         <View style={styles.priceContainer}>
-          <Text style={styles.priceText}>{product.price?.toLocaleString()} Euro</Text>
+          <Text style={styles.priceText}>{product.price?.toLocaleString()} Ariary</Text>
         </View>
 
         <View style={styles.descriptionContainer}>

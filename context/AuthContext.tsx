@@ -1,3 +1,4 @@
+// Authentification avec AsyncStorage et gestion des utilisateurs
 import React, {
   createContext,
   useReducer,

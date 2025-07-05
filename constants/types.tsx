@@ -1,3 +1,4 @@
+import { ImageSourcePropType } from 'react-native';
 export interface Product {
   id: string;
   name: string;
@@ -6,7 +7,7 @@ export interface Product {
   stock: number;
   category: string;
   vendeur: string;
-  image?: string;
+  image?: ImageSourcePropType;
   isActive: boolean;
 }
 
